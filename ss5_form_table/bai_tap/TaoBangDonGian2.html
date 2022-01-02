@@ -4,57 +4,76 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        table {
-            width: 50%;
+        .schedule {
+            width: 1500px; height: 500px;
             border-collapse: collapse;
+
         }
+        .info { font-size:30px}
+
         th {
             padding: 20px;
             border: 1px solid black;}
+        td { color: dodgerblue;
+        }
 
     </style>
 </head>
 <body>
-<h1>THỜI KHOÁ BIỂU</h1>
+<h1 style="color: blue; text-align: center">THỜI KHOÁ BIỂU</h1>
+<table class="info">
+    <tr style="text-align: left">
+        <td width="1200px">Lớp: T0908I</td>
+        <br>
+        <td>Thời gian học: 13h30 - 17h30</td>
+    </tr>
+    <tr style="text-align: left">
+        <td>Giáo viên: KhoaNV</td>
+        <br>
+        <td>Ngày học: Thứ 3,5,7</td>
+    </tr>
+    <tr>
+        <td>Phòng học: Class3/Lab3</td>
+    </tr>
+</table>
 
-    <th>
-        <tr>Lớp: T0908I</tr> <br>
-        <tr>Giáo viên: KhoaNV</tr> <br>
-        <tr>Phòng học: Class3/Lab3</tr>
-    </th>
-    <th style="text-align: right" >
-        <tr>Thời gian học: 13h30 - 17h30</tr> <br>
-        <tr>Ngày học: Thứ 3,5,7</tr>
-    </th>
 
-<!-- <div style="color: dodgerblue"><span>
-    <p style="float: left"> Lớp T0908I</p>
-    <p style="float: right"> Thời gian học: 13h30-17h30</p>
-</span> <br>
-<span>
-    <p style="text-align: left "> Giáo viên: KhoaNV</p>
-    <p style="text-align: right"> Ngày học: Thứ 3, 5, 7</p>
-</span>
-    <br>
-<p>Phòng học: Class3/Lab3</p>
-</div>
-<br>
-<br> /--!>
-<table>
+<table class="schedule">
     <tr style="background: yellow">
+        <th colspan="3" style="background: white"></th>
         <th>Thứ 3</th>
         <th>Thứ 5</th>
         <th>Thứ 7</th>
     </tr>
+    <tr style="background: darkorange">
+        <th>Tuần</th>
+        <th>Ngày bắt đầu</th>
+        <th>Ngày kết thúc</th>
+        <th colspan="3">Môn học</th>
+    </tr>
     <tr>
+        <th>01</th>
+        <th>01/09/2009</th>
+        <th>05/09/2009</th>
         <th>CF - T1,L1</th>
         <th>CF - T2,L2</th>
         <th>CF - T3,L3</th>
     </tr>
     <tr>
+        <th>02</th>
+        <th>08/09/2009</th>
+        <th>12/09/2009</th>
         <th>CF4 - T4,L4</th>
         <th>CF - Written Test</th>
         <th>C - T1,L1</th>
+    </tr>
+    <tr>
+        <th>03</th>
+        <th>...</th>
+        <th>...</th>
+        <th>...</th>
+        <th>...</th>
+        <th>...</th>
     </tr>
 
 </table>
