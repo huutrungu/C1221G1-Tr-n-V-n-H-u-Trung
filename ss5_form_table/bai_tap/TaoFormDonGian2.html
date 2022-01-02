@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dangkyhocvien</title>
+    <style>
+        .col1 {
+            margin-top: 5px;
+            float: left;
+            width: 100px;
+        }
+
+        .col2 {
+            margin-top: 5px;
+            width: 400px;
+        }
+
+
+        .row:after {
+            display: table;
+
+
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div style="background: navajowhite; width: 450px; height: 500px">
+
+        <h2 style="background: aquamarine ; color: blue"> ĐĂNG KÝ HỌC VIÊN</h2>
+        <div>
+            <div class="row">
+                <div class="col1"><label for="fullname">Họ và tên</label>
+                </div>
+                <div class="col2"><input type="text" id="fullname" name="hovaten" placeholder="nhập tên của bạn"></div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col1"><label for="birthday">Ngày sinh</label></div>
+                <div class="col2"><input type="date" id="birthday" name="ngaysinh" placeholder="nhập ngày sinh "></div>
+            </div>
+            <br>
+
+            <div class="row">
+                <p class="col1"> Giới tính
+                <div class="col2"><input type="radio" name="gender"> Nam
+                    <input type="radio" name="gender"> Nữ
+                </div>
+                </p> </div>
+            <br>
+            <div class="row">
+                <div class="col1"><label for="address" style=" width: 500px">Địa chỉ </label></div>
+                <div class="col2"><input type="text" id="address" name="diachi" placeholder="nhập địa chỉ"
+                                         style="height: 50px;"></div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col1"><label>Lớp </label></div>
+                <div class="col2"><select>
+
+                    <option value="lop">-chọn lớp-</option>
+                    <option value="lop">Lớp A</option>
+                    <option value="lop">Lớp B</option>
+                    <option value="lop">Lớp C</option>
+                </select></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1"><label for="email"> Email</label></div>
+                <div class="col2"><input type="email" id="email" name="email"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1"><label for="contact"> Điện thoại</label></div>
+                <div class="col2"><input type="text" id="contact"></div>
+            </div>
+
+            <input type="submit" name="signup" value="Đăng ký">
+            <input type="reset" name="reset" value="Nhập lại">
+
+        </div>
+    </div>
+</form>
+</body>
+</html>
