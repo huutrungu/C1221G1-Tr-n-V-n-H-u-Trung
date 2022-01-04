@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputSinh;
+    let inputLy;
+    let inputHoa;
+
+    inputSinh= prompt("Nhập điểm Sinh zo day:  ");
+    inputLy= prompt("điểm Lý:  ");
+    inputHoa= prompt("Điểm Hoá: ");
+
+    let Sinh= parseInt(inputSinh);
+    let Ly= parseInt(inputLy);
+    let Hoa= parseInt(inputHoa);
+
+    let tong = Sinh+Ly+Hoa;
+    let dtb= tong/3;
+
+document.write("Tổng điểm:  "+tong);
+document.write("<br/>");
+document.write("Điểm trung bình: "+dtb);
+
+
+</script>
+
+</body>
+</html>
