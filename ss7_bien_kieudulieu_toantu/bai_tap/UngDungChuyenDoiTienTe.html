@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<script>
-    function validationForm() {
-        let selected = document.getElementById("Fcurrency");
-        let selected =
 
-    }
-</script>
 
 </head>
 <body>
-<form name="chuyendoitien" onsubmit="return ValidationForm()" method="post">
+
     <label for="amount">Amount</label> <br>
     <input type="text" id="amount" name="amount">
 
     <label for="Fcurrency">From Currency</label>
     <select name="fcurrency" id="Fcurrency">
-        <option value="VND">VietNam</option>
+        <option value="VND">VND</option>
         <option value="USD">USD</option>
     </select>
 
@@ -28,7 +22,24 @@
         <option value="USD">USD</option>
         <option value="VND">VND</option>
     </select>
-</form>
+    <input type="button" id="convert" onclick="chuyenDoi()" value="Convert">
+    <p  id="kq"></p>
 
+<script>
+    function chuyenDoi() {
+        let ketQua;
+        let soTien = parseInt(document.getElementById("amount").value);
+        let selectedf = document.getElementById("Fcurrency").value;
+        let selectedt = document.getElementById("Tcurrency").value;
+        if (selectedf ==='VND' && selectedt==='USD') {
+            ketQua = soTien/23000;
+            document.getElementById("kq").innerHTML="Result: "+ ketQua + "USD";
+        }
+        if (selectedf === 'USD' && selectedt==='VND') {
+            ketQua = soTien*23000;
+            document.getElementById("kq").innerHTML="Result: "+ ketQua + "VND" ;
+        }
+    }
+</script>
 </body>
 </html>
