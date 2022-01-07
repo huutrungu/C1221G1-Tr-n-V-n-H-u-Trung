@@ -7,10 +7,10 @@
 <body>
 <input type="text" id="month" value>
 <input onclick="f () " value="Tính Số Ngày">
-<h3 id="kq"></h3>
+<h3 id="kq"> </h3>
 <script>
     function f() {
-        let month = parseInt(document.getElementById('month').value);
+        let month = parseInt(document.getElementById('month').value); (month = 2)
         switch (month) {
             case 1:
             case 3:
@@ -28,7 +28,7 @@
                 document.getElementById('kq').innerText = "Tháng " + month + " có 30 ngày";
                 break;
             case 2:
-                document.getElementById('kq').innerText = "Tháng 2 có 28 hoặc ngày";
+                document.getElementById('kq').innerText = "Tháng " +month + " có 28 hoặc 29 ngày";
                 break;
             default:
                 alert("nhập sai tháng. Vui lòng chọn từ 1-12");
