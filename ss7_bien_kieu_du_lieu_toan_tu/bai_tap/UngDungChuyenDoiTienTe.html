@@ -29,10 +29,10 @@
     function chuyenDoi() {
         let ketQua;
         let soTien = parseInt(document.getElementById("amount").value);
-        let selectedf = document.getElementById("Fcurrency").value;
-        let selectedt = document.getElementById("Tcurrency").value;
-        if (selectedf ==='VND' && selectedt==='USD') {
-            ketQu`a = soTien/23000;
+        let selectedFrom = document.getElementById("Fcurrency").value;
+        let selectedTo = document.getElementById("Tcurrency").value;
+        if (selectedFrom ==='VND' && selectedTo==='USD') {
+            ketQua   = soTien/23000;
             document.getElementById("kq").innerHTML="Result: "+ ketQua + "USD";
         }
         if (selectedf === 'USD' && selectedt==='VND') {
