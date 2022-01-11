@@ -8,19 +8,19 @@
 <script>
     let numbers = 20;
     let count = 0;
-    let N = 2;
-
+    let n = 2;
     while (count <= numbers) {
-        let count1=0;
-        for (let i = 1; i <= N; i++) {
-            if (N % i === 0) {
+        let count1 = 0;
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
                 count1++;
             }
         }
         if (count1 === 2) {
-            document.write(N + ",");
-            count++;}
-        N++;
+            document.write(n + ",");
+            count++;
+        }
+        n++;
     }
 
 </script>
