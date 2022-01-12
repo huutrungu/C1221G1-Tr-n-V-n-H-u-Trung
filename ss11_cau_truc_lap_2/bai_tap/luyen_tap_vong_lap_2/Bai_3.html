@@ -6,37 +6,40 @@
 </head>
 <body>
 <script>
-        for (i=1;i<=5;i++) {
-            for (let count=1;count<=i;count++) {
-                document.write('*');
-            }
-            document.write('<br/>');
-        } document.write('<hr/>')
-
-        for (i=1;i<=5;i++) {
-            for (let count=5;count>=i;count--) {
-                document.write('*');
-            }
-            document.write('<br/>');
-        } document.write('<hr/>')
-        for (i=1;i<=5;i++) {
-            for (let count=4;count>=i;count--) {
-                document.write('&nbsp&nbsp');
-            }
-            for (let count1=1;count1<=i;count1++) {
-                document.write('*');
-            }
-            document.write('<br/>');
-        } document.write('<hr/>')
-        for (i=1;i<=5;i++) {
-            for (let count=1;count<i;count++) {
-                document.write('&nbsp&nbsp');
-            }
-            for (let count1=5;count1>=i;count1--) {
-                document.write('*');
-            }
-            document.write('<br/>');
+    for (let i = 1; i <= 5; i++) {
+        for (let count = 1; count <= i; count++) {
+            document.write('*');
         }
+        document.write('<br/>');
+    }
+    document.write('<hr/>');
+
+    for (let i = 1; i <= 5; i++) {
+        for (let count = 5; count >= i; count--) {
+            document.write('*');
+        }
+        document.write('<br/>');
+    }
+    document.write('<hr/>');
+    for (let i = 1; i <= 5; i++) {
+        for (let count = 4; count >= i; count--) {
+            document.write('&nbsp&nbsp');
+        }
+        for (let count1 = 1; count1 <= i; count1++) {
+            document.write('*');
+        }
+        document.write('<br/>');
+    }
+    document.write('<hr/>');
+    for (let i = 1; i <= 5; i++) {
+        for (let count = 1; count < i; count++) {
+            document.write('&nbsp&nbsp');
+        }
+        for (let count1 = 5; count1 >= i; count1--) {
+            document.write('*');
+        }
+        document.write('<br/>');
+    }
 </script>
 
 </body>
