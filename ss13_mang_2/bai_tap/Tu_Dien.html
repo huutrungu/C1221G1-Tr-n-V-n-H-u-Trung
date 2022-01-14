@@ -11,6 +11,7 @@
             border-radius: 4px;
             padding: 12px 10px 12px 10px;
         }
+
         #submit {
             border-radius: 2px;
             padding: 10px 32px;
@@ -19,18 +20,34 @@
     </style>
 </head>
 <body>
-    <h2>Từ Điển Anh - Việt</h2>
-    <form>
-        <input type="text" name="search" placeholder="Nhập từ cần tìm"/>
-        <input type = "submit" id = "submit" value = "Tìm" onclick="trans()"/>
-    </form>
+<h2>Từ Điển Anh - Việt</h2>
+<form>
+    <input type="text" id="submit" name="search" placeholder="Nhập từ cần tìm"/>
+    <input type="button" value="Tìm" onclick="trans()"/>
+    <p id="kq"></p>
+</form>
 <script>
 
-    let english = ['Hello','Music','Love','Spring','Summer','Autumn','Winter'];
-    let vietnamese = ['Xin chào','Âm nhạc','Tình Yêu','Mùa Xuân','Muà Hạ','Mùa Thu','Mùa Đông'];
-    const english = num.toString();
-    const vietnamese = num.toString();
-    const result = [str[0]];
+    let engLish = ['Hello', 'Music', 'Love', 'Spring', 'Summer', 'Autumn', 'Winter'];
+    let vietNamese = ['Xin chào', 'Âm nhạc', 'Tình Yêu', 'Mùa Xuân', 'Muà Hạ', 'Mùa Thu', 'Mùa Đông'];
+    let flag = false;
+
+    function trans() {
+        let index = -1;
+        let word = document.getElementById('submit').value;
+        for (let i = 0; i < engLish.length; i++) {
+            if (engLish[i] === word) {
+                index = i;
+                flag = true;
+                break;
+            }
+        }
+        if (!flag) {
+            document.getElementById('kq').innerHTML = 'Không tìm thấy nghĩa của từ.'
+        } else {
+            document.getElementById('kq').innerHTML = 'Nghĩa là: ' + vietNamese[index];
+        }
+    }
 
 
 </script>
