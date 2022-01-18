@@ -6,20 +6,24 @@
 </head>
 <body>
 <script>
-    function timSaoTuongUng(tapHopSao, sao) {
+    function timChomSaoTuongUng(sao) {
         for (let i = 0; i < tapHopSao.length; i++) {
             if (tapHopSao[i] === sao) {
                 return i;
             }
         }
-        return 'không tìm thấy chòm sao tương ứng'; <!-- em chưa hiểu rõ cách dùng đoạn return này, anh sp e với nha! -->
+        return -1;
     }
 
     let tapHopSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
     let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
     let sao = prompt('nhap ten ngoi sao: ');
-    let viTriSao = timSaoTuongUng(tapHopSao, sao);
-    alert('chòm sao tương ứng của ngôi sao ' + sao + ' là ' + chomSao[viTriSao]);
+    let viTriSao = timChomSaoTuongUng(sao);
+    if (viTriSao !== -1) {
+        alert('tìm thây' + tapHopSao[viTriSao]);
+    } else {
+        alert('kho^ng tìm thấy');
+    }
 </script>
 </body>
 </html>
