@@ -24,6 +24,9 @@
         getWeight() {
             return this.weight;
         }
+        laughing() {
+            console.log('hahaha');
+        }
     }
 
     class Human {
@@ -39,12 +42,30 @@
 
         isMale() {
             if (!this.gender) {
-                return false;
+                alert(this.name + ' is FeMale');
+            } else {
+                alert(this.name + ' is Male');
             }
         }
 
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
         checkApple(apple) {
-            return apple.getWeight();
+            return console.log(apple.getWeight());
         }
 
         eatApple(apple) {
@@ -57,28 +78,32 @@
         }
 
         say(str) {
-            console.log(str);
+            console.log(this.name + ': ' + str);
         }
     }
 
     let apple = new Apple();
-    console.log(apple.getWeight());
+    let adam = new Human('Adam', true, 100);
+    adam.isMale();
+    adam.checkApple(apple);
+    adam.say("ăn táo không Eva?");
 
-    let human = new Human('Adam', true, 700);
-    human.eatApple();
-    console.log(apple.getWeight()); //kiem tra ham giam kl tao'.
-    console.log(human.checkApple()); //kiem tra ham kiem tra kl tao.
-    human.say('Hello!'); // kiem tra ham say.
-    apple.weight = 2;
-    console.log(apple.getWeight());
-    human.eatApple();
-    human.eatApple();
-    console.log(apple.getWeight());
-    human.eatApple();
+    let eva = new Human();
+    eva.setName('Eva');
+    eva.setGender(false);
+    eva.isMale();
+    eva.say('uk');
 
-    human.weight()
-    console.log(human.isMale());
+    for (let i = 0; i <= 5; i++) {
+        eva.eatApple(apple);
+        adam.eatApple(apple);
+    }
+    eva.checkApple(apple);
 
+    adam.say('code xong bt rồi, đi ngủ thôi Eva.');
+    eva.say('Adam còn bài công tắc bóng đèn mà?!');
+    adam.say('... :<');
+    apple.laughing();
 
 </script>
 </body>
