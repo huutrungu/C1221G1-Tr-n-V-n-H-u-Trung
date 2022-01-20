@@ -86,19 +86,22 @@
     let adam = new Human('Adam', true, 100);
     adam.isMale();
     adam.checkApple(apple);
-    adam.say("ăn táo không Eva?");
 
     let eva = new Human();
     eva.setName('Eva');
     eva.setGender(false);
+    eva.setWeight(42);
     eva.isMale();
+
+    adam.say("ăn táo không "+ eva.getName()+ '?');
     eva.say('uk');
 
     for (let i = 0; i <= 5; i++) {
         eva.eatApple(apple);
         adam.eatApple(apple);
     }
-    eva.checkApple(apple);
+    adam.checkApple(apple);
+    console.log(eva.getWeight());
 
     adam.say('code xong bt rồi, đi ngủ thôi Eva.');
     eva.say('Adam còn bài công tắc bóng đèn mà?!');
