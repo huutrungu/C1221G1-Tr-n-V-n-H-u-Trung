@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lượng kí tự CHUNG của 2 xâu kí tự</title>
+</head>
+<body>
+<script>
+    let s1 = 'aabccadzzz123';
+    let s2 = 'adcaaazzzzz123';
+    s1 = s1.split('');
+    s2 = s2.split('');
+    let count = 0;
+    let flag = false;
+    let arrKiTuChung = [];
+    let temp = 0;
+    for (let i = 0; i < s1.length; i++) {
+        for (let j = 0; j < s2.length; j++) {
+            if (s1[i] === s2[j]) {
+                flag = true;
+                temp = j;
+                break;
+            } else {
+                flag = false;
+            }
+        }
+        if (flag) {
+            count++;
+            s2.splice(temp, 1);              // xoá phần tử tại vị trí j.
+            arrKiTuChung.push(s1[i]);
+        }
+    }
+    console.log(s2);
+    console.log(arrKiTuChung);
+    console.log('số kí tự chung: ' + count);
+</script>
+</body>
+</html>

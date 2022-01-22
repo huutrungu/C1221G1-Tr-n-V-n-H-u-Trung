@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chuyển hoá xâu kí tự</title>
+    <title>Chuyển hoá xâu kí tự, tìm từ dài nhất trong xâu</title>
 </head>
 <body>
 <script>
@@ -16,7 +16,21 @@
         return str.join(' ');
     }
     let str1 = chuanHoaXauKiTu(str)
-    console.log(str1);
+    console.log(typeof(str1));
+
+    function timTuDaiNhatTrongXau() {
+        str1 = str1.split(' ');
+        let tuDaiNhat = str1[0];
+        for (let i = 1; i < str1.length; i++) {
+            if(str1[i].length>tuDaiNhat.length) {
+                tuDaiNhat = str1[i];
+            }
+        }
+        return tuDaiNhat;
+    }
+    let str2 = timTuDaiNhatTrongXau(str1);
+    console.log(str2);
+
 </script>
 </body>
 </html>
