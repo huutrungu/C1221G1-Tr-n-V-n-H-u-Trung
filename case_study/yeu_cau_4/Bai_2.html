@@ -12,16 +12,17 @@
    //  for (let strElement of str){  // lấy phần tử trong xâu push vào mảng (type: object?)
    //      arrStr.push(strElement);
    //  }
-    let arr = [null];            // không bỏ null vào thì nó k chạy.(?)
+    let arr = new Array(1);
+    console.log(arr);
     let flag = false;
     for (let i = 0; i < arrStr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
             if (arrStr[i] === arr[j]) {
                 flag = false;
                 break;
-            } else {
-                flag = true;
-            }
+        } else {
+            flag = true;
+        }
         }
         if (flag) {
             arr.push(arrStr[i]);
