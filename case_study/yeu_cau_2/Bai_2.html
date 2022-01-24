@@ -9,7 +9,7 @@
     let char = '';
     do {
          char = prompt("nhap 1 ki tu chu cai: ");
-    } while (!isNaN(char))
+    } while (!isNaN(parseFloat(char)) || char.length !== 1 )
 
     switch (char) {
         case 'o':
@@ -24,6 +24,8 @@
         case 'E':
             alert(char + ' là nguyên âm.');
             break;
+        default:
+            alert(char + ' là phụ âm.')
     }
 </script>
 </body>
