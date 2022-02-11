@@ -7,7 +7,7 @@
 <body>
 <script>
     function fiArr() {
-        let arrAllFi = [];
+        let arrAllFi = [0,1];
         let arrNumFi = [];
         let maxNum = arrNum[0];
         for (let i = 1; i < arrNum.length; i++) {
@@ -45,7 +45,7 @@
         return arrNumFi;
     }
 
-    let arrNum = [1, 3, 5, 4, 3, 2, 1, 5, 1, 3, 4, 5, 9, 8, 10, 15, 20];
+    let arrNum = [1,5,6,13,9,12,8,0,5,1];
     let arrNumFi = fiArr(arrNum);
     console.log(arrNumFi);
 </script>
