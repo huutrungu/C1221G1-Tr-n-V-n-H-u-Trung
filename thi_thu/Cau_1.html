@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let arrNum = [];
+    let count = 1;
+    let quantilyElenmentArr;
+    do {
+        quantilyElenmentArr = prompt("nhập số phần tử của mảng: ");
+    } while (quantilyElenmentArr > 50 || quantilyElenmentArr < 0 || isNaN(quantilyElenmentArr));
+    while (count <= quantilyElenmentArr) {
+        let num;
+        do {
+            num = parseInt(prompt("Nhập phần tử thứ " + count));
+        } while (isNaN(num));
+        arrNum.push(num);
+        count++;
+    }
+    let sum = 0;
+    let average = 0;
+    let count1 = 0;
+    for (let i = 0; i < arrNum.length; i++) {
+        if (i % 3 === 0) {
+            if (arrNum[i] % 5 === 0) {
+                sum += arrNum[i];
+                count1++;
+            }
+        }
+    }
+    average = sum / count1;
+    document.getElementById("result").innerHTML = "mảng gồm: " + arrNum + "<br>" + " kết quả: " + average;
+</script>
+</body>
+</html>

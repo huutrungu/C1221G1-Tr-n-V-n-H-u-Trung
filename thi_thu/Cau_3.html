@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fiArr() {
+        let arrAllFi = [];
+        let arrNumFi = [];
+        let maxNum = arrNum[0];
+        for (let i = 1; i < arrNum.length; i++) {
+            if (arrNum[i] > maxNum) {
+                maxNum = arrNum[i];
+            }
+        }
+        console.log(maxNum);
+        let fi = 2;
+        for (let i = 1, j = 1; fi <= maxNum; fi = i + j) {
+            i = j;
+            j = fi;
+            arrAllFi.push(fi);
+        }
+        console.log(arrAllFi);
+
+        for (let i = 0; i < arrNum.length; i++) {
+            for (let j = 0; j < arrAllFi.length; j++) {
+                if (arrNum[i] === arrAllFi[j]) {
+                    arrNumFi.push(arrNum[i]);
+                }
+            }
+        }
+
+        for (let i = 0; i < arrNumFi.length; i++) {
+            for (let j = i; j < arrNumFi.length; j++) {
+                let temp;
+                if (arrNumFi[j] < arrNumFi[i]) {
+                    temp = arrNumFi[j];
+                    arrNumFi[j] = arrNumFi[i];
+                    arrNumFi[i] = temp;
+                }
+            }
+        }
+        return arrNumFi;
+    }
+
+    let arrNum = [1, 3, 5, 4, 3, 2, 1, 5, 1, 3, 4, 5, 9, 8, 10, 15, 20];
+    let arrNumFi = fiArr(arrNum);
+    console.log(arrNumFi);
+</script>
+</body>
+</html>

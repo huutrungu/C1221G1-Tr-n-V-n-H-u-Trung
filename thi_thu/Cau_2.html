@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function convertString() {
+        str = str.replace(/\s+/g, " ").trim();
+        str = str.split(" ");
+        let result = "";
+        if (str.length >= 2) {
+            for (let i = 0; i < str.length; i++) {
+                result += str[i].charAt(0).toUpperCase();
+            }
+        } else {
+            alert("Chuỗi chỉ có 1 từ nên không cần viết tắt!");
+        }
+        return result;
+    }
+
+    let str = prompt("nhập chuỗi kí tự bất kì: ");
+    let strResult = convertString(str);
+    console.log(strResult);
+</script>
+</body>
+</html>
